@@ -1,0 +1,89 @@
+--1-A
+select * from cars
+
+--1-B
+select person.name as Nome_User, cars.licenseplate as Nome_Carro
+from link_ids
+inner join cars on cars.id = link_ids.idcar
+inner join person on person.id = link_ids.idperson
+order by person.name asc;
+
+
+--1-C
+select person.gender,count(person.gender)
+from link_ids
+inner join cars on cars.id = link_ids.idcar
+inner join person on person.id = link_ids.idperson
+group by person.gender 
+;
+
+--1-D
+select cars.brands,count(cars.licenseplate) as total
+from link_ids
+inner join cars on cars.id = link_ids.idcar
+inner join person on person.id = link_ids.idperson
+group by cars.brands
+order by total
+;
+
+
+--1-E
+select person.gender,count(cars.brands) as total
+from link_ids
+inner join cars on cars.id = link_ids.idcar
+inner join person on person.id = link_ids.idperson
+group by person.gender 
+order by total desc
+;
+
+--2-A
+
+select * 
+from person;
+
+--2-B
+select person.gender,AVG(person.age) 
+from link_ids
+inner join cars on cars.id = link_ids.idcar
+inner join person on person.id = link_ids.idperson
+group by person.gender 
+order by avg desc
+;
+
+--3-A
+select reviews.id, reviews.datestartreview
+from link_ids
+inner join cars on cars.id = link_ids.idcar
+inner join reviews on reviews.id = link_ids.idreview 
+where reviews.datestartreview >= '2004-05-20'
+and reviews.datestartreview <= '2004-05-27'
+;
+
+--3-B
+select cars.brands ,count(reviews.id) as total
+from link_ids
+inner join cars on cars.id = link_ids.idcar
+inner join reviews on reviews.id = link_ids.idreview 
+group by cars.brands
+order by total desc
+;
+
+--3-C
+select person.name ,count(reviews.id) as total
+from link_ids
+inner join person on person.id = link_ids.idperson
+inner join reviews on reviews.id = link_ids.idreview 
+group by person.name
+order by total desc
+;
+
+--3-D
+SELECT AVG(datestartreview) AS average_date
+FROM (
+  SELECT reviews.datestartreview
+  FROM link_ids
+  INNER JOIN cars ON cars.id = link_ids.idcar
+  INNER JOIN reviews ON reviews.id = link_ids.idreview 
+  WHERE reviews.datestartreview >= '2004-05-20'
+  AND reviews.datestartreview <= '2004-05-27'
+) subquery;

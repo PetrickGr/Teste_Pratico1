@@ -1,0 +1,74 @@
+### Endpoint de criação de Pessoas
+POST http://localhost:3003/person/signup
+Content-Type: application/json
+
+{
+  "name": "User02",
+  "age": 39,
+  "gender": "FEMININO" 
+}
+### Endpoint para obter todas as pessoas
+GET http://localhost:3003/person
+### Endpoint para obter todos os carros
+GET http://localhost:3003/cars
+### Endpoint para registrar um carro
+POST http://localhost:3003/cars/signCar
+Content-Type: application/json
+
+{
+  "idperson": "6e659631-cd18-4060-bfcc-6904dde172d5",
+  "licenseplate": "Carro7",
+  "brands": "FIAT" 
+}
+### Endpoint para criar uma revisão
+POST http://localhost:3003/review/signReview
+Content-Type: application/json
+
+{
+  "idperson": "6e659631-cd18-4060-bfcc-6904dde172d5",
+  "idcar":"00ee41f3-69ad-455f-b83f-95bcc58e6108",
+  "datestartreview": "21/01/2023"
+}
+### Endpoint para obter todas as revisoes
+GET http://localhost:3003/review
+### Endpoint para obter placas e id da review
+GET http://localhost:3003/review/CarDate
+###  Endpoint para obter o id
+GET http://localhost:3003/review/CarID/IDReview04
+### Endpoint para finalizar uma revisao
+PUT http://localhost:3003/review/finish
+Content-Type: application/json
+
+{
+  "id": "19306ed7-1647-41e3-b868-8519d291b662",
+  "dateendreview":"24/05/2023"
+}
+
+### Endpoints de relatorios (Tarefa 01) CARROS 1-A
+GET http://localhost:3003/reports/allCars
+### 1-B
+GET http://localhost:3003/reports/byName
+### 1-C
+GET http://localhost:3003/reports/byGender
+### 1-D
+GET http://localhost:3003/reports/byBrands
+### 1-E
+GET http://localhost:3003/reports/BrandsbyGender
+### 2 - A // PESSOAS
+GET http://localhost:3003/reports/allPersons
+### 2 - B
+GET http://localhost:3003/reports/personAVG
+### 3 - A (Informar data no formato: 0000-00-00)
+GET http://localhost:3003/reports/reviewDate
+Content-Type: application/json
+
+{
+    "datestartreview":"2004-05-20",
+    "dateendreview": "2004-05-27"
+}
+### 3 - B 
+GET http://localhost:3003/reports/reviewBrands
+### 3 - C 
+GET http://localhost:3003/reports/personReview
+
+
