@@ -7,7 +7,8 @@
     "start": "node ./build/index.js",
     "build": "tsc",
     "dev": "ts-node-dev ./src/index.ts",
-    "migrations": "tsc && node ./build/database/migrations/Migrations.js"
+    "migrations": "tsc && node ./build/database/migrations/Migrations.js",
+    "pm2": "tsc && pm2 start pm2.config.js"
   },
   "keywords": [],
   "author": "petrick-grillo",
