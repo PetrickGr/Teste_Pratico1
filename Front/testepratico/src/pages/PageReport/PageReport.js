@@ -22,25 +22,25 @@ export function PageReport() {
     //     datasets:
     // })
     const [relatorio3, setRelatorio3] = useState({
-        labels: byGender.map((gender) => gender.gender),
+        labels: byGender?.map((gender) => gender.gender),
         datasets: [{
             label: "Generos",
-            data: byGender.map((gender) => gender.count)
+            data: byGender?.map((gender) => gender.count)
         }]
     })
     const [relatorio4, setRelatorio4] = useState({
-        labels: byBrands.map((brands) => brands.brands),
+        labels: byBrands?.map((brands) => brands.brands),
         datasets: [{
             label: "Marcas",
-            data: byBrands.map((brands) => brands.total)
+            data: byBrands?.map((brands) => brands.total)
         }]
     })
     console.log(BrandsbyGender)
     const [relatorio5, setRelatorio5] = useState({
-        labels: BrandsbyGender.map((gender) => gender.gender),
+        labels: BrandsbyGender?.map((gender) => gender.gender),
         datasets: [{
             label: "Marcas order Mulher/Homem",
-            data: BrandsbyGender.map((gender) => gender.count)
+            data: BrandsbyGender?.map((gender) => gender.count)
         }]
     })
     // const [relatorio6, setRelatorio6] = useState({
@@ -49,10 +49,10 @@ export function PageReport() {
     // })
     // console.log(Math.round(personAVG))
     const [relatorio7, setRelatorio7] = useState({
-        labels: personAVG.map((gender) => gender.gender),
+        labels: personAVG?.map((gender) => gender.gender),
         datasets: [{
             label: "Idade media(AVG)",
-            data: personAVG.map((gender) => (gender.AVG))
+            data: personAVG?.map((gender) => (gender.AVG))
         }]
     })
     // console.log(reviewDate)
@@ -65,10 +65,10 @@ export function PageReport() {
     // })
     console.log(reviewBrands)
     const [relatorio9, setRelatorio9] = useState({
-        labels: reviewBrands.map((gender) => gender.brands),
+        labels: reviewBrands?.map((gender) => gender.brands),
         datasets: [{
             label: "Pessoas com maior nº de revisões",
-            data: reviewBrands.map((gender) => (gender.count))
+            data: reviewBrands?.map((gender) => (gender.count))
         }]
     })
     // const [relatorio10, setRelatorio10] = useState({

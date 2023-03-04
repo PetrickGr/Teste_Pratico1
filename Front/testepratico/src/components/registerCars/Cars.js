@@ -9,8 +9,8 @@ export function Cars() {
     const [selectPerson, setSelectPerson] = useState("")
     const [licenseplate, setLicenseplate] = useState("")
     const [brands, setBrands] = useState("")
-    const renderPerson = allPerson.map((person) => {
-        return <option key={person.id} value={person.id}>{person.name}</option>
+    const renderPerson = allPerson?.map((person) => {
+        return <option key={person?.id} value={person?.id}>{person?.name}</option>
     })
     const addCar = () => {
         const bodyCar = {

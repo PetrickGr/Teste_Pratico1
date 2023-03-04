@@ -10,13 +10,13 @@ export function Person() {
     const [age, setAge] = useState("")
     const [gender, setGender] = useState("")
 
-    const addPerson = () => {
+    const addPerson = async () => {
         const bodyPerson = {
             name: name,
             age: +(age),
             gender: gender
         }
-        axios.post(`${BASE_URL}/person/signup`, bodyPerson).then(() => {
+        await axios.post(`${BASE_URL}/person/signup`, bodyPerson).then(() => {
             alert("Pessoa Criada!")
         }).catch((erro) => {
             console.log(erro.response.data)

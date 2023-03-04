@@ -16,22 +16,22 @@ export function Review() {
     const [addReviewState, setaddReviewState] = useState(false)
     const actualDate = Date()
     const actualDateFormated = moment(actualDate).format("YYYY-MM-DD")
-    const renderPerson = allPerson.map((person) => {
-        return <option key={person.id} value={person.id}>{person.name}</option>
+    const renderPerson = allPerson?.map((person) => {
+        return <option key={person?.id} value={person?.id}>{person?.name}</option>
     })
-    const renderCars = allCars.map((car) => {
-        return <option key={car.id} value={car.id}>{car.licenseplate}</option>
+    const renderCars = allCars?.map((car) => {
+        return <option key={car?.id} value={car?.id}>{car?.licenseplate}</option>
     })
-    const renderCarsDate = allCarsAndDate.map((car) => {
-        return <option key={car.id} value={car.id}>{car.licenseplate}</option>
+    const renderCarsDate = allCarsAndDate?.map((car) => {
+        return <option key={car?.id} value={car?.id}>{car?.licenseplate}</option>
     })
-    const addReview = () => {
+    const addReview = async() => {
         const bodyReview = {
             idperson: selectPerson,
             idcar: selectPlate,
             datestartreview: datestartreview
         }
-        axios.post(`${BASE_URL}/review/signReview`, bodyReview).then(() => {
+        await axios.post(`${BASE_URL}/review/signReview`, bodyReview).then(() => {
             alert("Carro Registrado!")
             setaddReviewState(!addReviewState)
             console.log(addReviewState)
@@ -40,12 +40,12 @@ export function Review() {
             alert(erro.response.data.message)
         })
     }
-    const finishReview = () => {
+    const finishReview = async () => {
         const bodyFinish = {
             id: renderDate.id,
             dateendreview: actualDateFormated
         }
-        axios.put(`${BASE_URL}/review/finish`, bodyFinish).then(() => {
+        await axios.put(`${BASE_URL}/review/finish`, bodyFinish).then(() => {
             alert("Revisão Finalizada!")
             setfinishReviewState(!finishReviewState)
         }).catch((erro) => {
