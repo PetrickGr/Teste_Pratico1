@@ -1,5 +1,12 @@
 # Teste Pratico Simpllis
 
+## As funcionalidades basicas do projeto são:
+- Criar Usuario
+- Criar Carro
+- Criar Revisão para o carro
+- Mostrar respectivos graficos
+
+
 # Linguagens utilizadas:
 
 # Back-End:
@@ -16,11 +23,7 @@
 - Axios
 - React-Router
 
-## As funcionalidades basicas do projeto são:
-- Criar Usuario
-- Criar Carro
-- Criar Revisão para o carro
-- Mostrar respectivos graficos
+
 
 ## O teste prático feito para a empresa Simpllis contem 4 paginas:
 
