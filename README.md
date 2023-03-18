@@ -16,7 +16,7 @@
 
 ###  Pagina capaz de efetuar um cadastro de um carro, aonde é necessario informar os seguintes campos: Placa do carro; Marca do carro e seu respectivo dono.
 
-##3. Revisões: 
+## 3. Revisões: 
 
 ### Pagina capaz de criar e finalizar uma revisão
 ### 3.1. Sendo necessario informar os campos para a criação de uma revisão: Placa do carro; Nome do usuario e sua respectiva data.
