@@ -20,7 +20,7 @@
 
 ### Pagina capaz de criar e finalizar uma revisão
 ### 3.1. Sendo necessario informar os campos para a criação de uma revisão: Placa do carro; Nome do usuario e sua respectiva data.
-### 3.2. Para finalizar uma revisão é apenas necessario escolher seu carro e logo apos aparecera o que esta ocorrendo com o carro( se esta "Em andamento" ou "Finalizado), para finalizar uma revisão precisará somente clicar em um botão.
+### 3.2. Para finalizar uma revisão é apenas necessario escolher seu carro e logo apos aparecera o que esta ocorrendo com o carro("Em andamento" ou "Finalizado), para finalizar uma revisão precisará somente clicar em um botão.
 
 ## 4. Graficos:
 
