@@ -1,5 +1,21 @@
 # Teste Pratico Simpllis
 
+# Linguagens utilizadas:
+
+# Back-End:
+- Node.js
+- Postgresql
+- PM2
+- Typescript
+- Express
+
+# Front-End: 
+
+- React.Js
+- Styled-Components
+- Axios
+- React-Router
+
 ## As funcionalidades basicas do projeto são:
 - Criar Usuario
 - Criar Carro
@@ -26,18 +42,4 @@
 
 ###  A pagina de graficos contem informações de quantas marcas existem sendo utilizadas, quantidade de carros ordenados por marcas, quantidade de homens e mulheres etc...
 
-# Linguagens utilizadas:
 
-# Back-End:
-- Node.js
-- Postgresql
-- PM2
-- Typescript
-- Express
-
-# Front-End: 
-
-- React.Js
-- Styled-Components
-- Axios
-- React-Router
